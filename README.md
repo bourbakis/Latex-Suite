@@ -61,7 +61,10 @@ Thats it! You are done! Now start editing a latex file in vim. Latex-Suite shoul
 ``:help latex-suite.txt``
 
 ### Additional comment
-Remember, Latex-Suite is simply a set of utilities meant to work with Vim. Installing Latex-Suite does not mean that LaTeX is installed. You will need to install LaTeX seperately.
+Remember, Latex-Suite is simply a set of utilities meant to work with Vim. Installing Latex-Suite does not mean that LaTeX is installed. You will need to install LaTeX seperately. In my case, i installed latex as :
+```
+apt-get install texlive-latex-base
+```
 
-## Commands
+## Commands Guide
 Making Latex-Suite commands guide are on progressing. Before completion, refer this link: https://docs.google.com/presentation/d/1j-4IiNXm24r10gczn5yGuc9Nq1-w2EU_QzlKsvUM9lo/edit?usp=sharing
