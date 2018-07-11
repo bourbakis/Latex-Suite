@@ -67,4 +67,4 @@ apt-get install texlive-latex-base
 ```
 
 ## Commands Guide
-Making Latex-Suite commands guide are on progressing. Before completion, refer this link: https://docs.google.com/presentation/d/1j-4IiNXm24r10gczn5yGuc9Nq1-w2EU_QzlKsvUM9lo/edit?usp=sharing
+Stopped making commands guides for now. You can easily refer to vimlatexqrc.pdf 
