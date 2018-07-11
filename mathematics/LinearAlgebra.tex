@@ -1,0 +1,85 @@
+\documentclass[a4paper,12pt]{article}
+% decent example of doing mathematics and proofs in LaTeX.
+% An Incredible degree of information can be found at
+% http://en.wikibooks.org/wiki/LaTeX/Mathematics
+
+% Use wide margins, but not quite so wide as fullpage.sty
+\marginparwidth 0.1in 
+\oddsidemargin 0.05in 
+\evensidemargin 0.05in 
+\marginparsep 0.05in
+\topmargin 0.05in 
+\textwidth 6in \textheight 8 in
+% That's about enough definitions
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\makeatletter
+\renewenvironment{proof}[1][\proofname] {\par\pushQED{\qed}\normalfont\topsep6\p@\@plus6\p@\relax\trivlist\item[\hskip\labelsep\bfseries#1\@addpunct{.}]\ignorespaces}{\popQED\endtrivlist\@endpefalse}
+\makeatother
+
+\newtheoremstyle{break}
+  {\topsep}{\topsep}%
+  {\itshape}{}%
+  {\bfseries}{}%
+  {\newline}{}%
+\theoremstyle{break}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+
+
+\begin{document}
+
+\title{Linear Algebra Theorems}
+\author{Hyeonsu Lyu, Department of Electrical Engineering, UNIST}
+\date{June 29, 2018}
+\maketitle
+
+\section{Linear Transformation}
+\begin{definition} [Linear Transformation from $\mathbb{R}^n$ to $\mathbb{R}^m$]
+A \textit{linear transformation} $T : \mathbb{R}^n\to\mathbb{R}^m$ is a mapping such that for all scarars $\textit{a}$ and all $\overrightarrow{v}, \overrightarrow{w} \in \mathbb{R}^n,$
+\begin{align}
+    T(\overrightarrow{v}+\overrightarrow{w}=T(\overrightarrow{v}+\overrightarrow{w})\ and\ T(a\overrightarrow{v})=aT(\overrightarrow{v})
+\end{align}
+\end{definition}
+
+\begin{theorem} [Matrices and Linear transformations]\label{thm:mlt}
+1. Any $m\times n$ matrix A defines a linear transformation $T:\mathbb{R}^n\to\mathbb{R}^m$ by matrix multiplication:
+\begin{align}
+    T(\overrightarrow{v})=A\overrightarrow{v}.
+\end{align}
+2. Every linear transformation $T:\mathbb{R}^n\to\mathbb{R}^m$ is given by multiplication by the $m\times n$ matrix $[T]$:
+\begin{align}
+  T(\overrightarrow{v})=[T]\overrightarrow{v}
+\end{align}
+,where the \textit{i}th column of $[T]$ is $T(\overrightarrow{e_i}).$
+\end{theorem}
+
+\begin{proof}[Proof of theorem \ref{thm:mlt}] \hfill \\
+1. By definition of \textit{linear transformation}, mapping (2) is \textit{linear}.\\
+2. For any vector $\overrightarrow{v}\in \mathbb{R}^n$, $v$ can be represented as basis of $\mathbb{R}^n$, $\{\overrightarrow{e_1},\overrightarrow{e_2}, \dots, \overrightarrow{e_n}\}$.
+\begin{align}
+    \overrightarrow{v} = v_1\overrightarrow{e_1}+v_2\overrightarrow{e_2}+\dots+v_n\overrightarrow{e_n}
+\end{align}
+Since the linearity of mapping T,
+\begin{align*}
+    T(\overrightarrow{v})&=v_1T(\overrightarrow{e_1})+v_2T(\overrightarrow{e_2})+\dots+v_nT(\overrightarrow{e_n})\\
+    &=[T(\overrightarrow{e_1})|T(\overrightarrow{e_2})|\dots|T(\overrightarrow{e_n})]\begin{bmatrix}v_1 \\ v_2 \\ \vdots \\ v_n\end{bmatrix}\\
+    &= [T]\overrightarrow{v}
+\end{align*}
+\end{proof}
+
+\begin{definition} [Linear Transformation is onto]
+
+\end{definition}
+
+\section{Another Section}
+
+\end{document}
+
