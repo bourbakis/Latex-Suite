@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2018.7.9)  11 JUL 2018 16:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2018.7.9)  11 JUL 2018 20:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**LinearAlgebra.tex
-(./LinearAlgebra.tex
+**Calculus.tex
+(./Calculus.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 3 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -104,10 +104,47 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks25
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count99
+\calc@Bcount=\count100
+\calc@Adimen=\dimen112
+\calc@Bdimen=\dimen113
+\calc@Askip=\skip49
+\calc@Bskip=\skip50
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count101
+\calc@Cskip=\skip51
+)
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count102
+\l_MT_multwidth_dim=\dimen114
+\origjot=\skip52
+\l_MT_shortvdotswithinadjustabove_dim=\dimen115
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen116
+\l_MT_above_intertext_sep=\dimen117
+\l_MT_below_intertext_sep=\dimen118
+\l_MT_above_shortintertext_sep=\dimen119
+\l_MT_below_shortintertext_sep=\dimen120
+)
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks25
-\inpenc@posthook=\toks26
+\inpenc@prehook=\toks26
+\inpenc@posthook=\toks27
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2015/12/03 v1.1r UTF-8 support for inputenc
@@ -422,8 +459,8 @@ Language: english 2012/08/20 v3.3p English support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2016/02/24 3.9q Babel common definitions
-\babel@savecnt=\count99
-\U@D=\dimen112
+\babel@savecnt=\count103
+\U@D=\dimen121
 )
 \l@british = a dialect from \language\l@english 
 \l@UKenglish = a dialect from \language\l@english 
@@ -431,11 +468,10 @@ File: babel.def 2016/02/24 3.9q Babel common definitions
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-\c@theorem=\count100
-\c@corollary=\count101
-
-(./LinearAlgebra.aux)
-\openout1 = `LinearAlgebra.aux'.
+\c@theorem=\count104
+\c@corollary=\count105
+ (./Calculus.aux)
+\openout1 = `Calculus.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
 LaTeX Font Info:    ... okay on input line 37.
@@ -449,33 +485,56 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
 LaTeX Font Info:    ... okay on input line 37.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
 LaTeX Font Info:    ... okay on input line 37.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvips.def on input line 95.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
+))
+\Gin@req@height=\dimen122
+\Gin@req@width=\dimen123
+)
 LaTeX Font Info:    Try loading font information for U+msa on input line 42.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 42.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+Underfull \hbox (badness 10000) in paragraph at lines 58--62
+
+ []
+
+[1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 79--86
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--96
-
- []
-
-[2] (./LinearAlgebra.aux) ) 
+[2] [3] (./Calculus.aux) ) 
 Here is how much of TeX's memory you used:
- 1938 strings out of 494954
- 21377 string characters out of 6181004
- 89244 words of memory out of 5000000
- 5229 multiletter control sequences out of 15000+600000
+ 2813 strings out of 494954
+ 35079 string characters out of 6181004
+ 100407 words of memory out of 5000000
+ 6075 multiletter control sequences out of 15000+600000
  13144 words of font info for 50 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 27i,20n,26p,228b,256s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,9n,26p,397b,193s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on LinearAlgebra.dvi (2 pages, 5512 bytes).
+Output written on Calculus.dvi (3 pages, 8960 bytes).

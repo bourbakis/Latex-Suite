@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2018.7.9)  11 JUL 2018 16:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2018.7.9)  11 JUL 2018 16:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**LinearAlgebra.tex
-(./LinearAlgebra.tex
+**math.tex
+(./math.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 3 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -433,9 +433,8 @@ File: babel.def 2016/02/24 3.9q Babel common definitions
 ))
 \c@theorem=\count100
 \c@corollary=\count101
-
-(./LinearAlgebra.aux)
-\openout1 = `LinearAlgebra.aux'.
+ (./math.aux)
+\openout1 = `math.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
 LaTeX Font Info:    ... okay on input line 37.
@@ -450,32 +449,24 @@ LaTeX Font Info:    ... okay on input line 37.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
 LaTeX Font Info:    ... okay on input line 37.
 LaTeX Font Info:    Try loading font information for U+msa on input line 42.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 42.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 79--86
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--96
-
- []
-
-[2] (./LinearAlgebra.aux) ) 
+] (./math.aux) ) 
 Here is how much of TeX's memory you used:
- 1938 strings out of 494954
- 21377 string characters out of 6181004
- 89244 words of memory out of 5000000
- 5229 multiletter control sequences out of 15000+600000
- 13144 words of font info for 50 fonts, out of 8000000 for 9000
+ 1905 strings out of 494954
+ 20953 string characters out of 6181004
+ 76244 words of memory out of 5000000
+ 5207 multiletter control sequences out of 15000+600000
+ 7442 words of font info for 29 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 27i,20n,26p,228b,256s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,6n,26p,219b,190s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on LinearAlgebra.dvi (2 pages, 5512 bytes).
+Output written on math.dvi (1 page, 504 bytes).

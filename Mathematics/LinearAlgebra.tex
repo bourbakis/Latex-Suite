@@ -43,22 +43,22 @@
 
 \section{Linear Transformation}
 \begin{definition} [Linear Transformation from $\mathbb{R}^n$ to $\mathbb{R}^m$]
-A \textit{linear transformation} $T : \mathbb{R}^n\to\mathbb{R}^m$ is a mapping such that for all scarars $\textit{a}$ and all $\overrightarrow{v}, \overrightarrow{w} \in \mathbb{R}^n,$
+    A \textit{linear transformation} $T : \mathbb{R}^n\to\mathbb{R}^m$ is a mapping such that for all scarars $\textit{a}$ and all $\overrightarrow{v}, \overrightarrow{w} \in \mathbb{R}^n,$
 \begin{align}
     T(\overrightarrow{v}+\overrightarrow{w}=T(\overrightarrow{v}+\overrightarrow{w})\ and\ T(a\overrightarrow{v})=aT(\overrightarrow{v})
 \end{align}
 \end{definition}
 
 \begin{theorem} [Matrices and Linear transformations]\label{thm:mlt}
-1. Any $m\times n$ matrix A defines a linear transformation $T:\mathbb{R}^n\to\mathbb{R}^m$ by matrix multiplication:
-\begin{align}
-    T(\overrightarrow{v})=A\overrightarrow{v}.
-\end{align}
-2. Every linear transformation $T:\mathbb{R}^n\to\mathbb{R}^m$ is given by multiplication by the $m\times n$ matrix $[T]$:
-\begin{align}
-  T(\overrightarrow{v})=[T]\overrightarrow{v}
-\end{align}
-,where the \textit{i}th column of $[T]$ is $T(\overrightarrow{e_i}).$
+    1. Any $m\times n$ matrix A defines a linear transformation $T:\mathbb{R}^n\to\mathbb{R}^m$ by matrix multiplication:
+    \begin{align}
+        T(\overrightarrow{v})=A\overrightarrow{v}.
+    \end{align}
+        2. Every linear transformation $T:\mathbb{R}^n\to\mathbb{R}^m$ is given by multiplication by the $m\times n$ matrix $[T]$:
+    \begin{align}
+        T(\overrightarrow{v})=[T]\overrightarrow{v}
+    \end{align}
+        ,where the \textit{i}th column of $[T]$ is $T(\overrightarrow{e_i}).$
 \end{theorem}
 
 \begin{proof}[Proof of theorem \ref{thm:mlt}] \hfill \\
@@ -76,8 +76,26 @@ Since the linearity of mapping T,
 \end{proof}
 
 \begin{definition} [Linear Transformation is onto]
-
+    Let $A$ be $m\times n$ matrix. The followings are logically equivalent: \\
+    \indent1. The function $Ax=b$ is onto $\mathbb{R}^m$.\\
+    \indent2. For each $b\in \mathbb{R^m}$, the equation Ax=b has a solution.\\
+    \indent3. $b\in \mathbb{R^m}$ is a linear combination of the columns of $A$.\\
+    \indent4. The columns of $A$ span $\mathbb{R^m}$.\\
+    \indent5. $A$ has a pivot position in every row.\\
+    \indent6. $A$ has rank m\\
 \end{definition}
+
+\begin{definition} [Linear Transformation is 1-1]
+    Let $A$ be an $m\times n$ matrix. The followings are logically equivalent:\\
+    \indent1. The function $Ax=b$ is $1-1$.\\
+    \indent2. The equation $Ax=b$ has at most on solution for every b.\\
+    \indent3. The equation $Ax=0$ has only the trivial solution.\\
+    \indent4. The columns of A are linearly independent.\\
+    \indent5. A has a pivot posiition in every column.\\
+    \indent6. A has rank n.\\
+\end{definition}
+
+Related theroems : Inverse function theorem, Implicit function theorem, Tangent space on implicit function.
 
 \section{Another Section}
 

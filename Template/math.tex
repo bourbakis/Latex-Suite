@@ -1,0 +1,46 @@
+\documentclass[a4paper,12pt]{article}
+% decent example of doing mathematics and proofs in LaTeX.
+% An Incredible degree of information can be found at
+% http://en.wikibooks.org/wiki/LaTeX/Mathematics
+
+% Use wide margins, but not quite so wide as fullpage.sty
+\marginparwidth 0.1in 
+\oddsidemargin 0.05in 
+\evensidemargin 0.05in 
+\marginparsep 0.05in
+\topmargin 0.05in 
+\textwidth 6in \textheight 8 in
+% That's about enough definitions
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\makeatletter
+\renewenvironment{proof}[1][\proofname] {\par\pushQED{\qed}\normalfont\topsep6\p@\@plus6\p@\relax\trivlist\item[\hskip\labelsep\bfseries#1\@addpunct{.}]\ignorespaces}{\popQED\endtrivlist\@endpefalse}
+\makeatother
+
+\newtheoremstyle{break}
+  {\topsep}{\topsep}%
+  {\itshape}{}%
+  {\bfseries}{}%
+  {\newline}{}%
+\theoremstyle{break}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+
+
+\begin{document}
+\title{TITLE}
+\author{Hyeonsu Lyu, Department of Electrical Engineering, UNIST}
+\date{June 29, 2018}
+
+\maketitle
+
+\section{Linear Transformation}
+
+\end{document}

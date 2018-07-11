@@ -1,0 +1,155 @@
+\documentclass[a4paper,12pt]{article}
+% decent example of doing mathematics and proofs in LaTeX.
+% An Incredible degree of information can be found at
+% http://en.wikibooks.org/wiki/LaTeX/Mathematics
+
+% Use wide margins, but not quite so wide as fullpage.sty
+\marginparwidth 0.1in 
+\oddsidemargin 0.05in 
+\evensidemargin 0.05in 
+\marginparsep 0.05in
+\topmargin 0.05in 
+\textwidth 6in \textheight 8 in
+% That's about enough definitions
+
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{mathtools}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\makeatletter
+\renewenvironment{proof}[1][\proofname] {\par\pushQED{\qed}\normalfont\topsep6\p@\@plus6\p@\relax\trivlist\item[\hskip\labelsep\bfseries#1\@addpunct{.}]\ignorespaces}{\popQED\endtrivlist\@endpefalse}
+\makeatother
+
+\newtheoremstyle{break}
+  {\topsep}{\topsep}%
+  {\itshape}{}%
+  {\bfseries}{}%
+  {\newline}{}%
+\theoremstyle{break}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+
+
+\begin{document}
+
+\title{Calculus of Multivariate Functions}
+\author{Hyeonsu Lyu, Department of Electrical Engineering, UNIST}
+\date{July 3, 2018}
+\maketitle
+
+\section{Inverse and Implicit function theorem}
+\begin{theorem} [The inverse function theorem] 
+    \label{thm:InverseFunctionTheorem}
+    Suppose $f$ is a $\mathcal{C}^1-mapping$ of an open set $E\subset \mathbb{R}^n$ into $R^n$. $f'(a)$ is invertible for some $a\in E$, and $b=f(a)$. Then,\\
+    \indent (a)  there exists open sets $U$ and $V$ in $\mathbb{R}^n$ such that $a\in U, b\in V$, $f$ is one-to-one on $U$, and $f(U)=V$ \\
+    \indent (b)  if $g$ is the inverse of $f$, [which exists, by (a)], defined in $V$ by
+    \begin{align}
+        g(f(x))=x\ \  (x\in U),
+    \end{align}
+    then $g\in \mathcal{C}(V).$
+\end{theorem}
+
+\begin{theorem} [The implicit function theorem]
+    \label{thm:ImplicitFunctionTheorem}
+    Let $f$ be a $\mathcal{C}^1-mapping$ of an open set $E\subset \mathbb{R}^{n+m}$ into $\mathbb{R}^n$, such that $f(a,b)=0$ for some point $(a,b)\in E$.\\
+    \indent Put $A=f'(a,b)$ and assuem that $A_{\textit{x}}$ is invertible.\\
+    \indent Then there exists open sets $U\subset \mathbb{R}^{n+m}$ and $b \in W$, habing the following property:\\
+    \indent To every $y\in W$ corresponds a unique $x$ such that\\
+    \begin{align}
+        (x,y)\in\ U\ \ \ \ and \ \ \ f(x,y)=0.
+    \end{align}
+    \indent if this $x$ is defined to be $g(y)$, then $g$ is a $\mathcal{C}^1-mapping$ of $W$ into $\mathbb{R}^{n}$, $g(b)=a$,
+    \begin{align}
+        f(g(y),y)=0\ \ (y\in W),
+    \end{align}
+    \indent and
+    \begin{align}
+        g'(b)=-(A_x)^{-1}A_y.
+    \end{align}
+    \indent The function $g$ is “implicitly” defined by (4). Hence the name of the theorem.
+\end{theorem}
+
+\begin{proof} [Proof of theorem \ref{thm:InverseFunctionTheorem}]
+    \indent (a) Put $f'(a)=A$, and choose $\lambda$ so that
+    \begin{align}
+        2\lambda\norm{A^{-1}}=1.
+        \label{p1:1}
+    \end{align}
+    \indent since $f'$ is continuous at $a$, there is an open ball $U\subset E$, with center at $a$, such that
+    \begin{align}
+        \norm{f'(x)-A}<\lambda\ \ (x\in U).
+        \label{p1:2}
+    \end{align}
+    We associate to each $y\in \mathbb{R}^n$ a function $\varphi$, defined by
+    \begin{align}
+        \varphi(x)=x+A^{-1}(y-f(x)) \ \ (x \in E)
+        \label{p1:3}
+    \end{align}
+    Note that $f(x)=y$ if and only if x is a fixed point of $\varphi$.
+    Since $\varphi'(x)=I-A^{-1}f'(x)=A^{-1}(A-f'(x))$, (\ref{p1:1}) and (\ref{p1:2}) imply that
+    \begin{align}
+        \norm{\varphi'(x)}<\frac{1}{2}\ \ (x\in U)
+        \label{p1:4}
+    \end{align}
+    Hence
+    \begin{align}
+        |\varphi(x_1)-\varphi(x_2)|\leq \frac{1}{2}|x_1-x_2|\ \ \ \ (x_1,x_2 \in U),
+        \label{p1:5}
+    \end{align}
+    Then, by contraction theorem, it follows that $\varphi$ has at most one fixed point in U, so that $f(x)=y$ for at most one $x\in U$.
+    Thus $f$ is $1-1$ in $U$.
+
+    Next, put $V=f(U)$, and pick $y_0 \in V$. Then $y_0=f(x_0)$ for some $x_0\in U$. Let $B$ be an open ball with center at $x_0$ and radius $r>0$, so small that its closure $\bar{B}$ lies in U. We will show that $y\in V$ whenever $|y-y_0|<\lambda r$. This proves that V is open. (This proves that every $y\in V$ is interior point.) \\
+
+    Fix $y$, $|y-y_0| < \lambda r$. with $\varphi$ as in (\ref{p1:3}),
+    \begin{align*}
+        \varphi(x)-x_0|=|A^{-1}(y-y_0)|<\norm{A^{-1}}\lambda r=\frac{r}{2}.
+    \end{align*}
+    if $x \in \bar{B}$, it therefore follows from (\ref{p1:5}) that
+    \begin{align*}
+        \varphi(x)-x_0| &\leq |\varphi(x) - \varphi(x_0)|+|\varphi(x_0)-x_0| \\
+        &<\frac{1}{2}|x-x_0|+\frac{r}{2}\leq r;
+    \end{align*}
+    hence $\varphi(x) \in B$. Note that (\ref{p1:5}) holds if $x_1,x2\in\bar{B}$.
+
+    Thus $\varphi$ is a contraction of $\bar{B}$ into $\bar{B}$. Being a closed subset of $\mathbb{R}^n$, $\bar{B}$ is complete. By contraction theorem, $\varphi$ has a fixed point $x\in \bar{B}$. For this $x, f(x)=y$. Thus, $y\in f(\bar{B})\subset f(U)=V$.
+
+    This proves part (a) of the theorem.
+    
+    (b) Pick $y\in V$, $y+k\in V$. Then there exists $x\in U$, $x+h \in U$, so that $y=f(x),y+k=f(x+h)$. With $\varphi$ as in (\ref{p1:3}),
+    \begin{align}
+        \varphi{x+h}-\varphi{x}=h+A^{-1}[f(x)-f(x+h)h-A^{-1}k.
+        \label{p1:6}
+    \end{align}
+    by (\ref{p1:5}), $|h-A^{-1}k|\leq\frac{1}{2}|h|$. Hence $|A^{-1}k|\geq\frac{1}{2}|h|,$ and
+    \begin{align}
+        |h|\leq2\norm{A^{-1}}|k|=\lambda^{-1}|k|
+        \label{p1:7}
+    \end{align}
+
+    By (\ref{p1:1}), (\ref{p1:2}) and theorem 9.8[Rudin], $f'(x) has an inverse, say T.$ Since 
+    \begin{align*}
+        g(y+k)-g(y)-Tk=h-Tk=-T[f(x+h)-f(x)-f'(x)h],
+    \end{align*}
+    (\ref{p1:7}) implies
+    \begin{align*}
+        \frac{|g(y+k)-g(y)-Tk}{|k|}\leq\frac{\norm{T}}{\lambda} \cdot\frac{|f(x+h)-f(x)-f'(x)h|}{|h|}.
+    \end{align*}
+    
+    As $k\to0$, (\ref{p1:7}) shows that $h\to0$. The right side of the last inequality thus tends to 0. Hence the same is true of the left. We have thus proved that $g'(y)=T$. But $T$ was chosen to be the inverse of $f'(x)=f'(g(y))$. Thus
+    \begin{align}
+        g'(y)={f'(g(y))}^{-1}\ \ \ (y\in V).
+        \label{p1:8}
+    \end{align}
+     
+    Finally, note that $g$ is a continuous mapping of V onto U (Since g is differentiable), that $f'$ is a continuous mapping of $U$ into the set $\Omega$ of all invertible elements of $L(\mathbb{R}^n$, and that inversion is a continuous mapping of $\Omega$ onto $\Omega$, by theorem 9.8[Rudin]. If we combine these facts with (\ref{p1:8}), we see that $g\in\mathcal{c}'(V)$.
+
+\end{proof}
+
+
+
+\end{document}
